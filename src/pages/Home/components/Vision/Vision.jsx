@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 
 const Vision = () => {
   return (
-    <div className={cx('vision')}>
+    <section className={cx('vision')}>
       <div className={cx('inner')}>
         <div className={cx('grid')}>
           <div className={cx('container row')}>
@@ -80,7 +80,7 @@ const Vision = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
