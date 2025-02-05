@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import './GlobalStyles.scss';
+import './Grid.scss';
 
 const GlobalStyles = ({ children }) => {
   return <div>{children}</div>;

@@ -1,0 +1,63 @@
+// Vision
+.vision {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #f1f1f1;
+}
+
+.inner {
+  width: 1150px;
+}
+
+.vision-intro {
+}
+
+.vision-header {
+}
+
+.vision-sub-heading {
+  color: #b8b8b8;
+}
+
+.vision-heading {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.vision-desc {
+  margin-top: 32px;
+}
+
+.vision-list {
+  list-style: none;
+  margin-top: 32px;
+}
+
+.vision-item {
+  font-size: 1.6rem;
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+}
+
+.vision-icon {
+  color: #000;
+  font-size: 2rem;
+  margin-right: 12px;
+}
+
+.vision-text {
+  line-height: 32px;
+  display: inline-block;
+}
+
+.book-btn {
+  margin-top: 32px;
+}
+
+.vision-img {
+  border-radius: 50%;
+}

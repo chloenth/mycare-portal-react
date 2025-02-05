@@ -1,5 +1,5 @@
 import config from '~/config';
-import Home from '~/pages/Home';
+import Home from '~/pages/Home/Home';
 import Signin from '~/pages/Signin';
 import Signup from '~/pages/Signup';
 
