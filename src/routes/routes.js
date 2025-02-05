@@ -11,10 +11,12 @@ export const publicRoutes = [
   {
     path: '/signin',
     component: Signin,
+    layout: null,
   },
   {
     path: '/signup',
     component: Signup,
+    layout: null,
   },
 ];
 
