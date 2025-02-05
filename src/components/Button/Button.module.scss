@@ -1,0 +1,27 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  padding: 9px 16px;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  cursor: pointer;
+
+  + .wrapper {
+    margin-left: 20px;
+  }
+}
+
+.title {
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
