@@ -1,3 +1,4 @@
+import config from '~/config';
 import Home from '~/pages/Home';
 import Signin from '~/pages/Signin';
 import Signup from '~/pages/Signup';
@@ -5,16 +6,16 @@ import Signup from '~/pages/Signup';
 // Public routes
 export const publicRoutes = [
   {
-    path: '/',
+    path: config.routes.home,
     component: Home,
   },
   {
-    path: '/signin',
+    path: config.routes.signin,
     component: Signin,
     layout: null,
   },
   {
-    path: '/signup',
+    path: config.routes.signup,
     component: Signup,
     layout: null,
   },
