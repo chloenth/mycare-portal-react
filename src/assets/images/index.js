@@ -4,6 +4,8 @@ import treatmentRobotic from '~/assets/images/treatment-robotic-surgery.jpg';
 import treatment3DMapping from '~/assets/images/treatment-3d-mapping.jpg';
 import treatment3DPrintedOrgans from '~/assets/images/treatment-3d-printed-organs.jpg';
 import treatmentAiSurgery from '~/assets/images/treatment-ai-surgery.jpg';
+import employee1 from '~/assets/images/employee1.jpg';
+import employee2 from '~/assets/images/employee2.jpg';
 
 const images = {
   logo,
@@ -12,6 +14,8 @@ const images = {
   treatment3DMapping,
   treatment3DPrintedOrgans,
   treatmentAiSurgery,
+  employee1,
+  employee2,
 };
 
 export default images;

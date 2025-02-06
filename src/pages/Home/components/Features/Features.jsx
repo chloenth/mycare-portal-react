@@ -70,7 +70,7 @@ const Features = () => {
           height="515"
           src="https://www.youtube.com/embed/gdMS0J2WxRg"
           allow="autoplay; encrypted-media"
-          allowfullscreen
+          allowFullScreen
           className={cx('features-video')}
         ></iframe>
       </div>

@@ -5,9 +5,11 @@ import styles from './Header.module.scss';
 
 const cx = classNames.bind(styles);
 
-const Header = ({ subHeading, heading }) => {
+const Header = ({ className, subHeading, heading }) => {
+  const classes = cx('header', { [className]: className });
+
   return (
-    <header className={cx('header')}>
+    <header className={classes}>
       <p className={cx('sub-heading')}>{subHeading}</p>
       <h2 className={cx('heading')}>{heading}</h2>
     </header>
@@ -17,6 +19,7 @@ const Header = ({ subHeading, heading }) => {
 Header.propTypes = {
   subHeading: PropTypes.string,
   heading: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Header;
