@@ -9,22 +9,12 @@
 
 .inner {
   width: 1150px;
+  display: grid;
+  grid-template-columns: repeat(12, calc(100% / 12));
 }
 
 .vision-intro {
-}
-
-.vision-header {
-}
-
-.vision-sub-heading {
-  color: #b8b8b8;
-}
-
-.vision-heading {
-  font-size: 4rem;
-  font-weight: 500;
-  line-height: 1.4;
+  grid-column: 1/7;
 }
 
 .vision-desc {
@@ -59,5 +49,7 @@
 }
 
 .vision-img {
+  width: 100%;
+  grid-column: 8/-1;
   border-radius: 50%;
 }
