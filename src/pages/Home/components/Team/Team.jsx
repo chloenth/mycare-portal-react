@@ -70,7 +70,6 @@ const employeeList = [
 
 const Team = () => {
   const { containerRef, activeDot } = useScrollNavigation();
-  console.log('render');
   const itemsPerPage = 4;
 
   return (
