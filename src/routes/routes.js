@@ -18,7 +18,7 @@ export const publicRoutes = [
   {
     path: config.routes.signup,
     component: Signup,
-    layout: null,
+    layout: AuthLayout,
   },
 ];
 

@@ -24,7 +24,7 @@ const Header = () => {
 
         {/* Actions */}
         <div className={cx('actions')}>
-          <Button to="/signin" outline>
+          <Button to="/login" outline>
             Signin
           </Button>
           <Button to="/signup" outline>
