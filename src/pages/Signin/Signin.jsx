@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
-import styles from './Signin.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
+
+import styles from './Signin.module.scss';
 import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
@@ -26,7 +28,7 @@ const Signin = () => {
 
         <div className={cx('actions')}>
           <a href="">Forgot password?</a>
-          <a href="">Don’t have an account? Signup here!</a>
+          <Link to="/signup">Don’t have an account? Signup here!</Link>
         </div>
       </form>
     </div>
