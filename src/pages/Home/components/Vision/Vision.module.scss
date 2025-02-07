@@ -15,6 +15,9 @@
 
 .vision-intro {
   grid-column: 1/7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .vision-desc {
@@ -46,10 +49,11 @@
 
 .book-btn {
   margin-top: 32px;
+  width: 188px;
 }
 
 .vision-img {
-  width: 100%;
+  width: 90%;
   grid-column: 8/-1;
   border-radius: 50%;
 }
