@@ -1,0 +1,7 @@
+@mixin home-section($bg-color: transparent) {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: var(--inner-padding);
+  background-color: $bg-color;
+}

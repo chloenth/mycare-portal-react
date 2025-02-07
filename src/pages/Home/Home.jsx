@@ -5,6 +5,7 @@ import Vision from './components/Vision';
 import Features from './components/Features';
 import Team from './components/Team';
 import News from './components/News';
+import Contact from './components/Contact';
 
 const cx = classNames.bind(styles);
 
@@ -24,6 +25,7 @@ const Home = () => {
       <News />
 
       {/* Contact */}
+      <Contact />
     </div>
   );
 };

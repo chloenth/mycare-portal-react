@@ -1,0 +1,11 @@
+@use '~/components/GlobalStyles/Mixins.scss' as *;
+
+.contact {
+  @include home-section(var(--grey-color));
+}
+
+.inner {
+  width: var(--inner-width);
+  display: grid;
+  grid-template-columns: repeat(12, calc(100% / 12));
+}

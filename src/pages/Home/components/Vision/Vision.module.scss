@@ -1,10 +1,8 @@
+@use '~/components/GlobalStyles/Mixins.scss' as *;
+
 // Vision
 .vision {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: var(--inner-padding);
-  background-color: #f1f1f1;
+  @include home-section(var(--grey-color));
 }
 
 .inner {

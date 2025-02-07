@@ -1,14 +1,11 @@
+@use '~/components/GlobalStyles/Mixins.scss' as *;
+
 .team {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: var(--inner-padding);
-  background-color: #f1f1f1;
+  @include home-section(var(--grey-color));
 }
 
 .inner {
   width: var(--inner-width);
-  display: grid;
 }
 
 .employee-list {

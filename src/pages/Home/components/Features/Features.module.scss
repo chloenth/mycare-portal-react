@@ -1,13 +1,11 @@
+@use '~/components/GlobalStyles/Mixins.scss' as *;
+
 .features {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: var(--inner-padding);
+  @include home-section();
 }
 
 .inner {
   width: var(--inner-width);
-  display: grid;
 }
 
 // Art treatment list
