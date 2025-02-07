@@ -6,7 +6,6 @@ import treatment3DPrintedOrgans from '~/assets/images/treatment-3d-printed-organ
 import treatmentAiSurgery from '~/assets/images/treatment-ai-surgery.jpg';
 import employee1 from '~/assets/images/employee1.jpg';
 import employee2 from '~/assets/images/employee2.jpg';
-import user from '~/assets/images/user-regular.svg';
 
 const images = {
   logo,
@@ -17,7 +16,6 @@ const images = {
   treatmentAiSurgery,
   employee1,
   employee2,
-  user,
 };
 
 export default images;

@@ -3,6 +3,7 @@
 // Vision
 .vision {
   @include home-section(var(--grey-color));
+  margin-top: var(--header-height);
 }
 
 .inner {

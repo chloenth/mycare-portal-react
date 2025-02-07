@@ -1,13 +1,13 @@
 .wrapper {
   background-color: #c56060;
   min-height: 100vh;
-  padding-top: 30px;
+  padding: var(--header-height) 0;
 }
 
 .auth-logo {
   position: fixed;
-  top: 14px;
-  left: 55px;
+  top: 24px;
+  left: 80px;
 
   p {
     color: #fff;
