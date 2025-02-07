@@ -4,6 +4,7 @@ import styles from './Home.module.scss';
 import Vision from './components/Vision';
 import Features from './components/Features';
 import Team from './components/Team';
+import News from './components/News';
 
 const cx = classNames.bind(styles);
 
@@ -20,6 +21,8 @@ const Home = () => {
       <Team />
 
       {/* Latest News */}
+      <News />
+
       {/* Contact */}
     </div>
   );

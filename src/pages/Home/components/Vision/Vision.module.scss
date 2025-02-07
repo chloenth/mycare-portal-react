@@ -3,12 +3,12 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  padding: var(--inner-padding);
   background-color: #f1f1f1;
 }
 
 .inner {
-  width: 1150px;
+  width: var(--inner-width);
   display: grid;
   grid-template-columns: repeat(12, calc(100% / 12));
 }

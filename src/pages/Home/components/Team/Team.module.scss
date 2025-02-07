@@ -2,24 +2,29 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  padding: var(--inner-padding);
   background-color: #f1f1f1;
 }
 
 .inner {
-  width: 1150px;
+  width: var(--inner-width);
   display: grid;
 }
 
 .employee-list {
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
   overflow-x: auto;
   list-style: none;
-  margin-top: 52px;
+  margin: 52px auto 0;
   display: grid;
   grid-auto-columns: 190px;
   grid-auto-flow: column;
   column-gap: 130px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .employee-item {
@@ -63,25 +68,4 @@
 .features-btn {
   width: 100%;
   margin-top: 12px;
-}
-
-// Dot Navigation
-.dot-navigation {
-  width: 100%;
-  margin-top: 42px;
-  display: flex;
-  justify-content: center;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.dot.active {
-  background: var(--primary);
 }

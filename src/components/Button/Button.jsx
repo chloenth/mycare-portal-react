@@ -7,7 +7,8 @@ const cx = classNames.bind(styles);
 const Button = ({
   children,
   outline,
-  round,
+  pillShaped,
+  roundIcon,
   dark,
   className,
   leftIcon,
@@ -18,7 +19,8 @@ const Button = ({
   const classes = cx('wrapper', {
     [className]: className,
     outline,
-    round,
+    'pill-shaped': pillShaped,
+    'round-icon': roundIcon,
     dark,
   });
   const props = { onClick, ...passProps };
@@ -35,7 +37,8 @@ const Button = ({
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   outline: PropTypes.bool,
-  round: PropTypes.bool,
+  pillShaped: PropTypes.bool,
+  roundIcon: PropTypes.bool,
   dark: PropTypes.bool,
   className: PropTypes.string,
   leftIcon: PropTypes.node,

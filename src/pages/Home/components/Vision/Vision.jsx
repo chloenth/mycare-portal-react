@@ -57,7 +57,7 @@ const Vision = () => {
           </ul>
 
           <Button
-            round
+            pillShaped
             dark
             className={cx('book-btn')}
             rightIcon={<FontAwesomeIcon icon={faArrowRight} />}

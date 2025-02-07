@@ -2,11 +2,11 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  padding: var(--inner-padding);
 }
 
 .inner {
-  width: 1150px;
+  width: var(--inner-width);
   display: grid;
 }
 

@@ -10,6 +10,7 @@ import images from '~/assets/images';
 const cx = classNames.bind(styles);
 
 const Features = () => {
+  console.log('render');
   return (
     <section className={cx('features')}>
       <div className={cx('inner')}>
@@ -56,7 +57,7 @@ const Features = () => {
         </ul>
 
         <Button
-          round
+          pillShaped
           dark
           className={cx('features-btn')}
           rightIcon={<FontAwesomeIcon icon={faArrowRight} />}

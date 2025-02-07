@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -7,6 +6,8 @@ import styles from './Team.module.scss';
 import Header from '../Header';
 import Button from '~/components/Button';
 import images from '~/assets/images';
+import DotNavigation from '../DotNavigation';
+import { useScrollNavigation } from '~/hooks';
 
 const cx = classNames.bind(styles);
 const employeeList = [
@@ -68,25 +69,9 @@ const employeeList = [
 ];
 
 const Team = () => {
-  const employeeListRef = useRef();
-  const [activeDot, setActiveDot] = useState(0);
-
+  const { containerRef, activeDot } = useScrollNavigation();
+  console.log('render');
   const itemsPerPage = 4;
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (employeeListRef.current) {
-        const scrollLeft = employeeListRef.current.scrollLeft;
-        const width = employeeListRef.current.clientWidth;
-        const activeDot = Math.ceil(scrollLeft / width);
-        setActiveDot(activeDot);
-      }
-    };
-
-    const employeeList = employeeListRef.current;
-    employeeList.addEventListener('scroll', handleScroll);
-    return () => employeeList.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <section className={cx('team')}>
@@ -98,7 +83,7 @@ const Team = () => {
           heading="Meet our people"
         />
 
-        <ul className={cx('employee-list')} ref={employeeListRef}>
+        <ul className={cx('employee-list')} ref={containerRef}>
           {employeeList &&
             employeeList.map((employee, index) => (
               <li key={index} className={cx('employee-item')}>
@@ -114,7 +99,7 @@ const Team = () => {
                 </div>
 
                 <Button
-                  round
+                  pillShaped
                   dark
                   className={cx('features-btn')}
                   rightIcon={<FontAwesomeIcon icon={faArrowRight} />}
@@ -126,16 +111,11 @@ const Team = () => {
         </ul>
 
         {/* Dot Navigation */}
-        <div className={cx('dot-navigation')}>
-          {[...Array(Math.ceil(employeeList.length / itemsPerPage))].map(
-            (_, index) => (
-              <div
-                key={index}
-                className={cx('dot', { active: activeDot === index })}
-              ></div>
-            ),
-          )}
-        </div>
+        <DotNavigation
+          length={employeeList.length}
+          activeDot={activeDot}
+          itemsPerPage={itemsPerPage}
+        />
       </div>
     </section>
   );
