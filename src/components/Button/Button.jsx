@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 import styles from './Button.module.scss';
 
 const cx = classNames.bind(styles);
@@ -13,6 +14,8 @@ const Button = ({
   className,
   leftIcon,
   rightIcon,
+  to,
+  href,
   onClick,
   ...passProps
 }) => {
@@ -24,13 +27,22 @@ const Button = ({
     dark,
   });
   const props = { onClick, ...passProps };
+  let Comp = 'button';
+
+  if (to) {
+    props.to = to;
+    Comp = Link;
+  } else if (href) {
+    props.href = href;
+    Comp = 'a';
+  }
 
   return (
-    <button className={classes} {...props}>
+    <Comp className={classes} {...props}>
       {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
       <span className={cx('title')}>{children}</span>
       {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
-    </button>
+    </Comp>
   );
 };
 
@@ -43,6 +55,8 @@ Button.propTypes = {
   className: PropTypes.string,
   leftIcon: PropTypes.node,
   rightIcon: PropTypes.node,
+  to: PropTypes.string,
+  href: PropTypes.string,
   onClick: PropTypes.func,
 };
 

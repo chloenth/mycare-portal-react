@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 
-import config from '~/config';
 import styles from './Header.module.scss';
-import images from '~/assets/images';
 import Button from '~/components/Button';
+import Logo from '~/components/Logo';
 
 const cx = classNames.bind(styles);
 
@@ -13,13 +12,7 @@ const Header = () => {
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
         {/* Logo */}
-        <Link to={config.routes.home} className={cx('logo-link')}>
-          <img src={images.logo} alt="logo" className={cx('logo-img')} />
-          <div className={cx('logo-brand')}>
-            <p className={cx('brand-title')}>MyCare Portal</p>
-            <p className={cx('brand-text')}>consulting</p>
-          </div>
-        </Link>
+        <Logo />
 
         {/* Navigation */}
         <div className={cx('navigation')}>
@@ -31,8 +24,12 @@ const Header = () => {
 
         {/* Actions */}
         <div className={cx('actions')}>
-          <Button outline>Signin</Button>
-          <Button outline>Signup</Button>
+          <Button to="/signin" outline>
+            Signin
+          </Button>
+          <Button to="/signup" outline>
+            Signup
+          </Button>
         </div>
       </div>
     </header>

@@ -1,0 +1,91 @@
+.wrapper {
+  width: 1150px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  margin-top: 20px;
+  font-size: 3rem;
+  color: #f7f3f3;
+}
+
+// Form
+.auth-form {
+  margin-top: 18px;
+}
+
+.input-wrap {
+  position: relative;
+  width: 475px;
+  height: 45px;
+  margin: 30px 0;
+
+  input {
+    width: 100%;
+    padding-left: 30px;
+    height: 100%;
+    line-height: 35px;
+    font-size: 1.4rem;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #ccc;
+    color: #fff;
+  }
+
+  input::placeholder {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    color: #fff;
+  }
+}
+
+.form-btn {
+  width: 100%;
+  color: #566aa7;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #566aa7;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(86, 106, 167, 0.3);
+    transform: translateY(-2px);
+  }
+}
+
+// Actions
+.actions {
+  margin-top: 22px;
+
+  a {
+    color: #fff;
+    display: block;
+    text-align: end;
+    padding: 3px 0;
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+  }
+
+  a:hover {
+    color: #ccc;
+  }
+}
