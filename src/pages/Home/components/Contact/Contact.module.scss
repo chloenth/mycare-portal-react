@@ -6,6 +6,61 @@
 
 .inner {
   width: var(--inner-width);
+}
+
+.contact-info {
+  margin: 52px auto 0;
   display: grid;
-  grid-template-columns: repeat(12, calc(100% / 12));
+  grid-template-columns: repeat(2, 50%);
+  padding: 0 30px;
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.contact-item {
+  font-size: 1.8rem;
+  padding: 4px 0;
+}
+
+.contact-icon {
+  font-size: 1.6rem;
+  margin-right: 12px;
+}
+
+.contact-form {
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(12, calc((100% - (11 * 20px)) / 12));
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.form-name,
+.form-email,
+.form-message {
+  font-size: 1.6rem;
+  padding: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.form-name {
+  grid-column: 1/7;
+}
+
+.form-email {
+  grid-column: 7/-1;
+}
+
+.form-message {
+  grid-column: 1/-1;
+}
+
+.form-btn {
+  float: right;
+  margin-top: 12px;
 }

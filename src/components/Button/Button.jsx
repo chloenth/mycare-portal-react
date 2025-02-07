@@ -35,7 +35,7 @@ const Button = ({
 };
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   outline: PropTypes.bool,
   pillShaped: PropTypes.bool,
   roundIcon: PropTypes.bool,
