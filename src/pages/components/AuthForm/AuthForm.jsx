@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from './AuthForm.module.scss';
 import Button from '~/components/Button';
+import IconInput from '~/components/IconInput';
 
 const cx = classNames.bind(styles);
 
@@ -15,10 +15,13 @@ const AuthForm = ({ heading, inputList, btnText, login, action }) => {
       <form action="" className={cx('auth-form')}>
         {inputList &&
           inputList.map((input, index) => (
-            <div key={index} className={cx('input-wrap')}>
-              <input type={input.type} placeholder={input.placeholder} />
-              <FontAwesomeIcon icon={input.icon} className={cx('input-icon')} />
-            </div>
+            <IconInput
+              white
+              key={index}
+              type={input.type}
+              placeholder={input.placeholder}
+              icon={input.icon}
+            />
           ))}
 
         <Button className={cx('form-btn')}>{btnText}</Button>
