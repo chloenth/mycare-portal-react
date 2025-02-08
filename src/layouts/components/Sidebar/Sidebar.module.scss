@@ -1,0 +1,50 @@
+.wrapper {
+  background-color: #c56060;
+  min-height: 100vh;
+  padding: 22px 34px;
+}
+
+.sidebar-logo {
+  img {
+    filter: brightness(1.1);
+  }
+
+  p {
+    color: #fff;
+  }
+}
+
+.menu-list {
+  list-style: none;
+  margin-top: 44px;
+}
+
+.menu-item + .menu-item {
+  margin-top: 12px;
+}
+
+.menu-item.active {
+  .menu-link {
+    background-color: #e9beca;
+    color: #c0083c;
+    border: 1px solid #e9beca;
+    border-radius: 44px;
+  }
+}
+
+.menu-link {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #f2d6d6;
+  display: block;
+  padding: 6px 5px 6px 15px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.menu-icon {
+  font-size: 1.6rem;
+  margin-right: 14px;
+}
