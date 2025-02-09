@@ -1,0 +1,40 @@
+.status-label {
+  padding: 2px 0;
+  width: 88px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.available {
+  background-color: rgb(223, 249, 249);
+  color: rgb(99, 115, 127);
+  border-color: rgb(163, 242, 237);
+}
+
+.unavailable {
+  background-color: rgb(255, 245, 244);
+  color: rgb(253, 110, 113);
+  border-color: rgb(252, 66, 71);
+}
+
+.confirmed {
+  background-color: rgb(162, 243, 237);
+  color: rgb(25, 36, 38);
+  border-color: rgb(208, 247, 246);
+}
+
+.pending {
+  background-color: rgb(255, 225, 225);
+  color: rgb(137, 123, 125);
+  border-color: rgb(255, 239, 239);
+}
+
+.cancelled {
+  background-color: rgb(196, 196, 196);
+  color: rgb(77, 78, 80);
+  border-color: rgb(224, 224, 224);
+}

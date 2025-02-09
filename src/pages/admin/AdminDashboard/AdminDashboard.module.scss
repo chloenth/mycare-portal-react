@@ -90,7 +90,7 @@
   border-radius: 8px;
 }
 
-.section-chart {
+.section-body {
   margin-top: 18px;
 }
 
@@ -117,4 +117,67 @@
 
 .revenue-btn + .revenue-btn {
   margin: 0;
+}
+
+// Doctors' Schedule
+.doctors-list {
+  list-style: none;
+  margin-top: 0;
+}
+
+.doctors-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #dfdddd;
+}
+
+.doctors-item:last-child {
+  border-bottom: none;
+}
+
+.doctors-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.doctor-avatar {
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.doctor-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.doctor-name {
+  font-size: 1.5rem;
+  color: #535252;
+  font-weight: 500;
+
+  span {
+    display: block;
+    font-size: 1.1rem;
+    color: #646262;
+    font-weight: 400;
+  }
+}
+
+.doctor-status {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.status-time {
+  font-size: 1.1rem;
+  color: #646262;
+  margin-top: 4px;
 }

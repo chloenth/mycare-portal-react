@@ -15,6 +15,9 @@ import BarChart from '~/components/BarChart';
 import Button from '~/components/Button';
 import LineChart from '~/components/LineChart';
 import DonutChart from '~/components/DonutChart';
+import images from '~/assets/images';
+import StatusLabel from '~/components/StatusLabel';
+import { Status } from '~/constants';
 
 const cx = classNames.bind(styles);
 
@@ -95,7 +98,7 @@ const AdminDashboard = () => {
           </Button>
         </div>
 
-        <div className={cx('section-barchart')}>
+        <div className={cx('section-body')}>
           <BarChart />
         </div>
       </div>
@@ -114,7 +117,7 @@ const AdminDashboard = () => {
           </div>
         </div>
 
-        <div className={cx('section-chart')}>
+        <div className={cx('section-body')}>
           <LineChart />
         </div>
       </div>
@@ -132,13 +135,110 @@ const AdminDashboard = () => {
             </a>
           </div>
 
-          <div className={cx('section-chart')}>
+          <div className={cx('section-body')}>
             <DonutChart />
           </div>
         </div>
 
         {/* Doctors' Schedule */}
-        <div className={cx('doctor-schedule')}>Doctors Schedule</div>
+        <div className={cx('doctor-schedule')}>
+          <div className={cx('section-header')}>
+            <h5 className={cx('section-heading')}>Doctors Schedule</h5>
+            <a href="">
+              <FontAwesomeIcon icon={faEllipsis} />
+            </a>
+          </div>
+
+          <ul className={cx('section-body', 'doctors-list')}>
+            {/* Doctors' item */}
+            <li className={cx('doctors-item')}>
+              <a href="" className={cx('doctors-link')}>
+                <img
+                  src={images.userAvatar}
+                  alt="doctor-avatar"
+                  className={cx('doctor-avatar')}
+                />
+                <div className={cx('doctor-info')}>
+                  <h6 className={cx('doctor-name')}>
+                    Dr.Petra Winsburry
+                    <span>General Medicine</span>
+                  </h6>
+
+                  <div className={cx('doctor-status')}>
+                    <StatusLabel status={Status.AVAILABLE} />
+                    <p className={cx('status-time')}>09:00 AM - 12:00 PM</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            {/* Doctors' item */}
+            <li className={cx('doctors-item')}>
+              <a href="" className={cx('doctors-link')}>
+                <img
+                  src={images.userAvatar}
+                  alt="doctor-avatar"
+                  className={cx('doctor-avatar')}
+                />
+                <div className={cx('doctor-info')}>
+                  <h6 className={cx('doctor-name')}>
+                    Dr.Petra Winsburry
+                    <span>General Medicine</span>
+                  </h6>
+
+                  <div className={cx('doctor-status')}>
+                    <StatusLabel status={Status.UNAVAILABLE} />
+                    <p className={cx('status-time')}>09:00 AM - 12:00 PM</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            {/* Doctors' item */}
+            <li className={cx('doctors-item')}>
+              <a href="" className={cx('doctors-link')}>
+                <img
+                  src={images.userAvatar}
+                  alt="doctor-avatar"
+                  className={cx('doctor-avatar')}
+                />
+                <div className={cx('doctor-info')}>
+                  <h6 className={cx('doctor-name')}>
+                    Dr.Petra Winsburry
+                    <span>General Medicine</span>
+                  </h6>
+
+                  <div className={cx('doctor-status')}>
+                    <StatusLabel status={Status.AVAILABLE} />
+                    <p className={cx('status-time')}>09:00 AM - 12:00 PM</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            {/* Doctors' item */}
+            <li className={cx('doctors-item')}>
+              <a href="" className={cx('doctors-link')}>
+                <img
+                  src={images.userAvatar}
+                  alt="doctor-avatar"
+                  className={cx('doctor-avatar')}
+                />
+                <div className={cx('doctor-info')}>
+                  <h6 className={cx('doctor-name')}>
+                    Dr.Petra Winsburry
+                    <span>General Medicine</span>
+                  </h6>
+
+                  <div className={cx('doctor-status')}>
+                    <StatusLabel status={Status.UNAVAILABLE} />
+                    <p className={cx('status-time')}>09:00 AM - 12:00 PM</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
 
         {/* Report */}
         <div className={cx('report')}>Report</div>
