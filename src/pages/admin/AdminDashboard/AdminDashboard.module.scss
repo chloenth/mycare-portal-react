@@ -9,28 +9,6 @@
   grid-column: span 2;
 }
 
-.total-invoice {
-  grid-column: span 2;
-}
-
-.total-patients {
-  grid-column: span 2;
-  border: 1px solid #eee;
-  padding: 10px;
-}
-
-.new-patients {
-  grid-column: span 2;
-  border: 1px solid #eee;
-  padding: 10px;
-}
-
-.appointments {
-  grid-column: span 2;
-  border: 1px solid #eee;
-  padding: 10px;
-}
-
 .calendar {
   grid-column: 9 / -1;
   grid-row: 1/4;
@@ -83,4 +61,34 @@
   grid-column: 9 / -1;
   border: 1px solid #eee;
   padding: 10px;
+}
+
+// Patient Overview by age
+.section-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-heading {
+  font-size: 1.6rem;
+  color: #126f70;
+
+  span {
+    display: block;
+    font-size: 1.2rem;
+    color: #9c9999;
+    font-weight: 500;
+  }
+}
+
+.section-btn {
+  padding: 0 10px;
+  font-size: 1.4rem;
+  max-height: 36px;
+  background-color: rgba(36, 57, 86, 1);
+  color: #ddd;
+}
+
+.section-barchart {
+  margin-top: 18px;
 }

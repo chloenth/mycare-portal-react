@@ -1,14 +1,17 @@
 import classNames from 'classnames/bind';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faUserGroup,
   faUserPlus,
   faFileInvoice,
+  faChevronDown,
 } from '@fortawesome/free-solid-svg-icons';
 import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 
 import styles from './AdminDashboard.module.scss';
 import StatsCard from '~/components/StatsCard';
 import BarChart from '~/components/BarChart';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
@@ -77,7 +80,21 @@ const AdminDashboard = () => {
 
       {/* Patient Overview by age */}
       <div className={cx('patient-overview-by-age')}>
-        <BarChart />
+        <div className={cx('section-header')}>
+          <h5 className={cx('section-heading')}>
+            Patient Overview <span>by Age Stages</span>
+          </h5>
+          <Button
+            className={cx('section-btn')}
+            rightIcon={<FontAwesomeIcon icon={faChevronDown} />}
+          >
+            Last 8 Days
+          </Button>
+        </div>
+
+        <div className={cx('section-barchart')}>
+          <BarChart />
+        </div>
       </div>
 
       {/* Revenue */}
