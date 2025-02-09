@@ -5,6 +5,7 @@ import {
   faUserPlus,
   faFileInvoice,
   faChevronDown,
+  faEllipsis,
 } from '@fortawesome/free-solid-svg-icons';
 import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 
@@ -12,6 +13,7 @@ import styles from './AdminDashboard.module.scss';
 import StatsCard from '~/components/StatsCard';
 import BarChart from '~/components/BarChart';
 import Button from '~/components/Button';
+import LineChart from '~/components/LineChart';
 
 const cx = classNames.bind(styles);
 
@@ -98,13 +100,36 @@ const AdminDashboard = () => {
       </div>
 
       {/* Revenue */}
-      <div className={cx('revenue')}>Revenue</div>
+      <div className={cx('revenue')}>
+        <div className={cx('section-header')}>
+          <h5 className={cx('section-heading')}>Revenue</h5>
+
+          <div className={cx('revenue-btn-list')}>
+            <Button className={cx('section-btn', 'revenue-btn', 'active')}>
+              Week
+            </Button>
+            <Button className={cx('section-btn', 'revenue-btn')}>Month</Button>
+            <Button className={cx('section-btn', 'revenue-btn')}>Year</Button>
+          </div>
+        </div>
+
+        <div className={cx('section-barchart')}>
+          <LineChart />
+        </div>
+      </div>
 
       {/* Summary container */}
       <div className={cx('summary-container')}>
         {/* Patient Overview by departments */}
         <div className={cx('patient-overview-by-departments')}>
-          Patient overview by department
+          <div className={cx('section-header')}>
+            <h5 className={cx('section-heading')}>
+              Patient Overview <span>by Departments</span>
+            </h5>
+            <a href="">
+              <FontAwesomeIcon icon={faEllipsis} />
+            </a>
+          </div>
         </div>
 
         {/* Doctors' Schedule */}

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 20px;
-  row-gap: 10px;
+  row-gap: 20px;
 }
 
 .column-span-2 {
@@ -19,13 +19,13 @@
 .patient-overview-by-age {
   grid-column: span 4;
   border: 1px solid #eee;
-  padding: 10px;
+  padding: 20px 10px;
 }
 
 .revenue {
   grid-column: span 4;
   border: 1px solid #eee;
-  padding: 10px;
+  padding: 15px 10px;
 }
 
 .summary-container {
@@ -70,7 +70,7 @@
 }
 
 .section-heading {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #126f70;
 
   span {
@@ -87,8 +87,34 @@
   max-height: 36px;
   background-color: rgba(36, 57, 86, 1);
   color: #ddd;
+  border-radius: 8px;
 }
 
 .section-barchart {
   margin-top: 18px;
+}
+
+// Revenue
+.revenue-btn-list {
+  background-color: #ddd;
+  border-radius: 12px;
+}
+
+.revenue-btn {
+  min-width: 70px;
+  padding: 8px 0;
+  border-radius: 12px;
+  background-color: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.revenue-btn.active {
+  background-color: rgba(36, 57, 86, 1);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: #ddd;
+}
+
+.revenue-btn + .revenue-btn {
+  margin: 0;
 }
