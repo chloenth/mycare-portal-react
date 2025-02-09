@@ -6,6 +6,11 @@ import {
   faFileInvoice,
   faChevronDown,
   faEllipsis,
+  faBroomBall,
+  faArrowRight,
+  faWrench,
+  faCircleExclamation,
+  faLayerGroup,
 } from '@fortawesome/free-solid-svg-icons';
 import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 
@@ -241,7 +246,90 @@ const AdminDashboard = () => {
         </div>
 
         {/* Report */}
-        <div className={cx('report')}>Report</div>
+        <div className={cx('report')}>
+          <div className={cx('section-header')}>
+            <h5 className={cx('section-heading')}>Report</h5>
+            <a href="">
+              <FontAwesomeIcon icon={faEllipsis} />
+            </a>
+          </div>
+
+          <div className={cx('section-body')}>
+            <ul className={cx('report-list')}>
+              {/* Report item */}
+              <li className={cx('report-item')}>
+                <FontAwesomeIcon
+                  icon={faBroomBall}
+                  className={cx('report-icon')}
+                />
+                <div className={cx('report-info')}>
+                  <h5 className={cx('report-heading')}>
+                    Room Cleaning Needed{' '}
+                    <span className={cx('report-time')}>1 minutes ago</span>
+                  </h5>
+                  <FontAwesomeIcon
+                    className={cx('action-btn')}
+                    icon={faArrowRight}
+                  />
+                </div>
+              </li>
+
+              {/* Report item */}
+              <li className={cx('report-item')}>
+                <FontAwesomeIcon
+                  icon={faWrench}
+                  className={cx('report-icon')}
+                />
+                <div className={cx('report-info')}>
+                  <h5 className={cx('report-heading')}>
+                    Equipment Maintenance
+                    <span className={cx('report-time')}>3 minutes ago</span>
+                  </h5>
+                  <FontAwesomeIcon
+                    className={cx('action-btn')}
+                    icon={faArrowRight}
+                  />
+                </div>
+              </li>
+
+              {/* Report item */}
+              <li className={cx('report-item')}>
+                <FontAwesomeIcon
+                  icon={faCircleExclamation}
+                  className={cx('report-icon')}
+                />
+                <div className={cx('report-info')}>
+                  <h5 className={cx('report-heading')}>
+                    HVAC System Issue
+                    <span className={cx('report-time')}>5 minutes ago</span>
+                  </h5>
+                  <FontAwesomeIcon
+                    className={cx('action-btn')}
+                    icon={faArrowRight}
+                  />
+                </div>
+              </li>
+
+              {/* Report item */}
+              <li className={cx('report-item')}>
+                <FontAwesomeIcon
+                  icon={faLayerGroup}
+                  className={cx('report-icon')}
+                />
+                <div className={cx('report-info')}>
+                  <h5 className={cx('report-heading')}>
+                    Medication Restock
+                    <span className={cx('report-time')}>1 hour ago</span>
+                  </h5>
+                  <FontAwesomeIcon
+                    className={cx('action-btn')}
+                    icon={faArrowRight}
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       {/* Patient Appointment table */}

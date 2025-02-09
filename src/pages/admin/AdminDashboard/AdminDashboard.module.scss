@@ -181,3 +181,55 @@
   color: #646262;
   margin-top: 4px;
 }
+
+// Report
+.report-list {
+  list-style: none;
+}
+
+.report-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.report-item + .report-item {
+  margin-top: 18px;
+}
+
+.report-icon {
+  font-size: 1.8rem;
+  background-color: rgb(162, 243, 237);
+  color: rgb(33, 57, 85);
+  padding: 6px;
+  border-radius: 3px;
+}
+
+.report-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 16px;
+}
+
+.report-heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.report-time {
+  display: block;
+  font-size: 1.4rem;
+  color: rgb(163, 163, 165);
+  font-weight: 400;
+}
+
+.action-btn {
+  color: rgb(166, 166, 169);
+  font-size: 1.7rem;
+  padding: 0 4px;
+}
