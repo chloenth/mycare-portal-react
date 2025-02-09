@@ -14,6 +14,7 @@ import StatsCard from '~/components/StatsCard';
 import BarChart from '~/components/BarChart';
 import Button from '~/components/Button';
 import LineChart from '~/components/LineChart';
+import DonutChart from '~/components/DonutChart';
 
 const cx = classNames.bind(styles);
 
@@ -113,7 +114,7 @@ const AdminDashboard = () => {
           </div>
         </div>
 
-        <div className={cx('section-barchart')}>
+        <div className={cx('section-chart')}>
           <LineChart />
         </div>
       </div>
@@ -129,6 +130,10 @@ const AdminDashboard = () => {
             <a href="">
               <FontAwesomeIcon icon={faEllipsis} />
             </a>
+          </div>
+
+          <div className={cx('section-chart')}>
+            <DonutChart />
           </div>
         </div>
 
