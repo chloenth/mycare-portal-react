@@ -23,6 +23,7 @@ import DonutChart from '~/components/DonutChart';
 import images from '~/assets/images';
 import StatusLabel from '~/components/StatusLabel';
 import { Status } from '~/constants';
+import AppointmentSummary from '../components/AppointmentSummary';
 
 const cx = classNames.bind(styles);
 
@@ -333,7 +334,18 @@ const AdminDashboard = () => {
       </div>
 
       {/* Patient Appointment table */}
-      <div className={cx('appointments-list')}>Patient Appointment table</div>
+      <div className={cx('appointments-section')}>
+        <div className={cx('section-header')}>
+          <h5 className={cx('section-heading')}>Patient Appointment</h5>
+          <a href="" className={cx('appointments-view-btn')}>
+            View All
+          </a>
+        </div>
+
+        <div className={cx('section-body')}>
+          <AppointmentSummary />
+        </div>
+      </div>
 
       {/* Recent Activity */}
       <div className={cx('recent-activity')}>Recent Activity</div>

@@ -19,7 +19,7 @@
 .patient-overview-by-age {
   grid-column: span 4;
   border: 1px solid #eee;
-  padding: 20px 10px;
+  padding: 15px 10px;
 }
 
 .revenue {
@@ -33,17 +33,17 @@
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 10px;
+  column-gap: 20px;
 }
 
 .patient-overview-by-departments {
   border: 1px solid #eee;
-  padding: 10px;
+  padding: 15px 10px;
 }
 
 .doctor-schedule {
   border: 1px solid #eee;
-  padding: 10px;
+  padding: 15px 10px;
 }
 
 .report {
@@ -51,16 +51,16 @@
   padding: 10px;
 }
 
-.appointments-list {
+.appointments-section {
   grid-column: 1/9;
   border: 1px solid #eee;
-  padding: 10px;
+  padding: 20px 25px;
 }
 
 .recent-activity {
   grid-column: 9 / -1;
   border: 1px solid #eee;
-  padding: 10px;
+  padding: 15px 10px;
 }
 
 // Patient Overview by age
@@ -232,4 +232,11 @@
   color: rgb(166, 166, 169);
   font-size: 1.7rem;
   padding: 0 4px;
+}
+
+// Patient Appointment table
+.appointments-view-btn {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: rgb(166, 167, 166);
 }
