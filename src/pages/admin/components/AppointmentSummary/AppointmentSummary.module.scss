@@ -54,4 +54,52 @@
     font-weight: 500;
     margin-top: 4px;
   }
+
+  &:hover {
+    background-color: rgb(193, 244, 245);
+  }
+}
+
+.date-btn.active {
+  background-color: rgb(36, 57, 86);
+
+  span {
+    color: #e9e6e6;
+  }
+}
+
+// Appointment table
+.appointment-table {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+
+  th {
+    text-align: left;
+
+    color: #126f70;
+    font-weight: 500;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .icon-sort {
+    margin-left: 8px;
+  }
+
+  tbody tr:hover {
+    background-color: #eee;
+    cursor: pointer;
+  }
+
+  td {
+    color: rgb(77, 77, 79);
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
 }

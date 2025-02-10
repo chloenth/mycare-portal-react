@@ -1,6 +1,6 @@
 .status-label {
   padding: 2px 0;
-  width: 88px;
+  min-width: 88px;
   border-radius: 20px;
   text-align: center;
   font-weight: 500;
@@ -12,7 +12,7 @@
 .available {
   background-color: rgb(223, 249, 249);
   color: rgb(99, 115, 127);
-  border-color: rgb(163, 242, 237);
+  border-color: rgb(139, 241, 234);
 }
 
 .unavailable {
@@ -24,17 +24,20 @@
 .confirmed {
   background-color: rgb(162, 243, 237);
   color: rgb(25, 36, 38);
-  border-color: rgb(208, 247, 246);
+  border-color: rgb(99, 230, 226);
+  font-size: 1.4rem;
 }
 
 .pending {
   background-color: rgb(255, 225, 225);
   color: rgb(137, 123, 125);
-  border-color: rgb(255, 239, 239);
+  border-color: rgb(215, 163, 163);
+  font-size: 1.4rem;
 }
 
 .cancelled {
   background-color: rgb(196, 196, 196);
   color: rgb(77, 78, 80);
-  border-color: rgb(224, 224, 224);
+  border-color: rgb(159, 153, 153);
+  font-size: 1.4rem;
 }
