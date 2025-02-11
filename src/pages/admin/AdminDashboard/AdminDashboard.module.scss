@@ -5,32 +5,54 @@
   row-gap: 20px;
 }
 
-.column-span-2 {
-  grid-column: span 2;
+.main-content {
+  grid-column: 1/10;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
-.calendar {
+.sub-content {
+  grid-column: 10 / -1;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-span-3 {
+  grid-column: span 3;
+}
+
+.column-span-6 {
+  grid-column: span 6;
+}
+
+.column-span-12 {
+  grid-column: span 12;
+}
+
+.schedule-overview {
   grid-column: 9 / -1;
   grid-row: 1/4;
   border: 1px solid #eee;
-  padding: 10px;
+  padding: 15px 16px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
 }
 
 .patient-overview-by-age {
-  grid-column: span 4;
   border: 1px solid #eee;
   padding: 15px 10px;
+  border-radius: 10px;
 }
 
 .revenue {
-  grid-column: span 4;
   border: 1px solid #eee;
   padding: 15px 10px;
+  border-radius: 10px;
 }
 
 .summary-container {
-  grid-column: 1/9;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
@@ -39,22 +61,25 @@
 .patient-overview-by-departments {
   border: 1px solid #eee;
   padding: 15px 10px;
+  border-radius: 10px;
 }
 
 .doctor-schedule {
   border: 1px solid #eee;
   padding: 15px 10px;
+  border-radius: 10px;
 }
 
 .report {
   border: 1px solid #eee;
   padding: 10px;
+  border-radius: 10px;
 }
 
 .appointments-section {
-  grid-column: 1/9;
   border: 1px solid #eee;
   padding: 20px 25px;
+  border-radius: 10px;
 }
 
 .recent-activity {

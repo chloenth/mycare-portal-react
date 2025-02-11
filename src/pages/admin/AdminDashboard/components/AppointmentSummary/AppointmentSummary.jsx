@@ -27,11 +27,17 @@ const AppointmentSummary = () => {
         const date = new Date();
         date.setDate(today.getDate() + i);
 
+        const fullDate =
+          date.getFullYear() +
+          '-' +
+          String(date.getMonth() + 1).padStart(2, '0') +
+          '-' +
+          String(date.getDate()).padStart(2, '0');
         const weekday = date.toLocaleDateString('en-US', { weekday: 'short' }); // Mon, Tue,..
         const day = date.getDate(); // 16, 17,..
 
         newDates.push({
-          fullDate: date.toISOString().split('T')[0], // YYYY-MM-DD
+          fullDate,
           weekday,
           day,
         });

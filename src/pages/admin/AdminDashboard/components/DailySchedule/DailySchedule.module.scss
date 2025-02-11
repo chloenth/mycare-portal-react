@@ -1,0 +1,27 @@
+.wrapper {
+  background-color: aliceblue;
+  padding: 16px 10px;
+  border-radius: 6px;
+  border: 1px solid #b0bed1;
+  margin-top: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+    padding: 4px;
+    cursor: pointer;
+  }
+}
+
+.schedule {
+  margin-top: 18px;
+}

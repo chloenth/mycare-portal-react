@@ -38,3 +38,74 @@ body {
 a:hover {
   opacity: 0.8;
 }
+
+// Daily task schedules
+/* Ẩn border-top của toàn bộ calendar */
+.fc {
+  border-top: none !important;
+}
+
+// Ẩn header của FullCalendar
+.fc a.fc-col-header-cell-cushion {
+  display: none;
+}
+
+/* Ẩn phần "All Day" trong FullCalendar */
+.fc .fc-daygrid-header {
+  display: none !important;
+}
+
+.fc .fc-daygrid-day-top {
+  display: none !important;
+}
+
+/* Đổi màu nền từng slot giờ */
+.fc-timegrid-slot {
+  background-color: aliceblue !important; /* Màu trắng */
+}
+
+/* Nếu bạn chỉ muốn đổi nền cho các slot có sự kiện, sử dụng đoạn này */
+.fc .fc-timegrid-event {
+  background-color: rgb(163, 242, 239) !important; /* Màu nền của các sự kiện */
+}
+
+.fc-v-event {
+  border: none;
+  border-radius: 8px;
+}
+
+.fc-timegrid-event .fc-event-time {
+  font-size: 1.3rem;
+  color: rgb(137, 150, 150);
+  padding: 8px 10px;
+  font-weight: 500;
+}
+.fc-event-title-container {
+  padding: 8px 10px;
+  color: black;
+  font-weight: 500;
+}
+
+/* Nếu muốn đổi màu nền chỉ cho slot của từng giờ (9:00, 10:00, ...) */
+// .fc-timegrid-slot.fc-timegrid-slot-label {
+//   background-color: #fff !important; /* Chỉnh màu theo ý thích */
+// }
+
+/* Ẩn tất cả đường kẻ nhỏ giữa mỗi giờ (ví dụ: 9:30, 10:30...) */
+// .fc-timegrid-slot {
+//   border-top: none !important;
+// }
+// .fc-timegrid-slot.fc-timegrid-slot-label.fc-timegrid-slot-minor {
+//   border: none;rgb(146, 115, 115)
+// }
+
+/* Giữ lại đường kẻ chính giữa mỗi giờ (9:00, 10:00, ...) */
+.fc-timegrid-slot.fc-timegrid-slot-label:nth-child(2n) {
+  border-top: 1px solid #df487a !important; /* Có thể đổi màu */
+}
+
+.fc .fc-timegrid-slot-label-cushion {
+  font-size: 1.4rem;
+  color: rgb(165, 165, 165);
+  font-weight: 600;
+}

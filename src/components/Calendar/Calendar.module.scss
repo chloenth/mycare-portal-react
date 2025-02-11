@@ -1,0 +1,92 @@
+.calendar-wrapper {
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.calendar-title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.calendar-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-control-icon {
+  font-size: 1.4rem;
+  padding: 6px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+.calendar-control-icon + .calendar-control-icon {
+  margin-left: 16px;
+}
+
+.calendar-body {
+  margin-top: 14px;
+}
+
+.weekdays-list {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgb(163, 163, 165);
+
+  li {
+    flex: 1;
+  }
+}
+
+.calendar-dates {
+  margin-top: 14px;
+}
+
+.dates-list-row {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 8px;
+  margin-top: 8px;
+}
+
+.date-item {
+  flex: 1;
+  font-size: 1.6rem;
+  color: rgb(105, 106, 108);
+  text-align: center;
+  padding: 6px 0;
+  font-weight: 500;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #eee;
+    cursor: pointer;
+  }
+}
+
+.date-item.disabled {
+  color: rgb(207, 207, 207);
+
+  &:hover {
+    background-color: transparent;
+    cursor: default;
+  }
+}
+
+.date-item.current {
+  background-color: rgb(36, 57, 86);
+  color: rgb(198, 223, 228);
+}
