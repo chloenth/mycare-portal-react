@@ -14,6 +14,7 @@ const IconInput = ({
   grey,
   roundCorner,
   className,
+  ...props
 }) => {
   const classes = cx('input-wrap', {
     'white-input': white,
@@ -24,7 +25,7 @@ const IconInput = ({
 
   return (
     <div className={classes}>
-      <input type={type} placeholder={placeholder} />
+      <input type={type} placeholder={placeholder} {...props} />
       <FontAwesomeIcon icon={icon} className={cx('input-icon')} />
     </div>
   );
@@ -38,6 +39,7 @@ IconInput.propTypes = {
   grey: PropTypes.bool,
   roundCorner: PropTypes.bool,
   className: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default IconInput;

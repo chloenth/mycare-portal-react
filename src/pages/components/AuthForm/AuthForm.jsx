@@ -8,19 +8,31 @@ import IconInput from '~/components/IconInput';
 
 const cx = classNames.bind(styles);
 
-const AuthForm = ({ heading, inputList, btnText, login, action }) => {
+const AuthForm = ({
+  heading,
+  inputList,
+  btnText,
+  login,
+  action,
+  onChange,
+  formData,
+  onSubmit,
+}) => {
   return (
     <div className={cx('wrapper')}>
       <h2 className={cx('heading')}>{heading}</h2>
-      <form action="" className={cx('auth-form')}>
+      <form action="" className={cx('auth-form')} onSubmit={onSubmit}>
         {inputList &&
           inputList.map((input, index) => (
             <IconInput
               white
               key={index}
+              name={input.name}
               type={input.type}
               placeholder={input.placeholder}
               icon={input.icon}
+              onChange={onChange}
+              value={formData[input.name]}
             />
           ))}
 
@@ -28,7 +40,6 @@ const AuthForm = ({ heading, inputList, btnText, login, action }) => {
 
         <div className={cx('actions')}>
           {login && <a href="">Forgot password?</a>}
-
           <Link to={action.link}>{action.text}</Link>
         </div>
       </form>
@@ -51,6 +62,9 @@ AuthForm.propTypes = {
     link: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
   }),
+  onChange: PropTypes.func,
+  formData: PropTypes.object,
+  onSubmit: PropTypes.func,
 };
 
 export default AuthForm;

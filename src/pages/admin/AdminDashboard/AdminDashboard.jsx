@@ -11,8 +11,13 @@ import {
   faWrench,
   faCircleExclamation,
   faLayerGroup,
+  faHospitalUser,
+  faUserDoctor,
 } from '@fortawesome/free-solid-svg-icons';
-import { faCalendar } from '@fortawesome/free-regular-svg-icons';
+import {
+  faCalendar,
+  faCalendarCheck,
+} from '@fortawesome/free-regular-svg-icons';
 
 import styles from './AdminDashboard.module.scss';
 import StatsCard from '~/components/StatsCard';
@@ -356,7 +361,58 @@ const AdminDashboard = () => {
         </div>
 
         {/* Recent Activity */}
-        <div className={cx('recent-activity')}>Recent Activity</div>
+        <div className={cx('recent-activity')}>
+          <div className={cx('section-header')}>
+            <h5 className={cx('section-heading')}>Recent Activity</h5>
+            <a href="">
+              <FontAwesomeIcon icon={faEllipsis} />
+            </a>
+          </div>
+
+          <ul className={cx('recent-activity')}>
+            <li>
+              <FontAwesomeIcon icon={faHospitalUser} />
+              <p>
+                Patient John Doe registered in the system.
+                <span>10:30 AM</span>
+              </p>
+            </li>
+
+            <li>
+              <FontAwesomeIcon icon={faUserDoctor} />
+              <p>
+                Dr.Smith updated availability for consultations on 23 February
+                2025.
+                <span>12:30 PM</span>
+              </p>
+            </li>
+
+            <li>
+              <FontAwesomeIcon icon={faCalendarCheck} />
+              <p>
+                Patient Jane Doe checked in for their appointment.
+                <span>13:00 PM</span>
+              </p>
+            </li>
+
+            <li>
+              <FontAwesomeIcon icon={faHospitalUser} />
+              <p>
+                Patient John Doe registered in the system.
+                <span>10:30 AM</span>
+              </p>
+            </li>
+
+            <li>
+              <FontAwesomeIcon icon={faUserDoctor} />
+              <p>
+                Dr.Smith updated availability for consultations on 23 February
+                2025.
+                <span>12:30 PM</span>
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
